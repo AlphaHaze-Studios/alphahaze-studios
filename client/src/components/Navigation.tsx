@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logoImage from "@assets/generated_images/AlphaHaze_Studios_logo_d1f7e793.png";
+import logoImage from "@assets/generated_images/AlphaHaze_final_logo.png";
 
 export function Navigation() {
   const [location] = useLocation();
@@ -37,7 +37,7 @@ export function Navigation() {
       }`}
       data-testid="nav-main"
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-2 md:py-3">
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center justify-center gap-8 xl:gap-16">
           <div className="flex items-center gap-6 xl:gap-10">
@@ -79,7 +79,7 @@ export function Navigation() {
             <img
               src={logoImage}
               alt="AlphaHaze Studios"
-              className="h-16 w-16 xl:h-20 xl:w-20 object-contain transition-all duration-500 hover:scale-110 hover:rotate-6 relative z-10"
+              className="h-16 w-auto xl:h-20 object-contain transition-all duration-500 hover:scale-105 relative z-10"
             />
           </Link>
 
@@ -111,7 +111,7 @@ export function Navigation() {
             <img
               src={logoImage}
               alt="AlphaHaze Studios"
-              className="h-12 w-12 sm:h-14 sm:w-14 object-contain transition-all duration-500 hover:scale-110 relative z-10"
+              className="h-12 w-auto sm:h-14 object-contain transition-all duration-500 hover:scale-105 relative z-10"
             />
           </Link>
 
