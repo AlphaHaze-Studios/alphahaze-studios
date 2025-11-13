@@ -1,0 +1,86 @@
+Build a modern, elegant, single-page-style website which has on scroll page effect for an indie game studio named “AlphaHaze Studios”. 
+Use only frontend (no backend). The design should be clean, smooth, and premium — similar in feel to Bhoos Games’ website (bhoos.com). 
+
+Overall Design:
+- Light theme with elegant typography and soft gradients or subtle background animations.
+- Fully responsive for both desktop and mobile.
+- Smooth scrolling and section fade-in/slide-in animations.
+- Consistent color palette — white background, soft gray tones, and accent color (like #3C79F5 or something sleek and modern).
+- Smooth hover effects on links, buttons, and cards.
+
+---
+
+### Navigation Bar:
+- Centered navbar at the top of every page.
+- Layout:
+  - Left side: “Games” link and Store link (play store redirect)
+  - Center: Studio logo (clicking it always brings you back to the homepage).
+  - Right side: “About” link. and contact link
+- All elements should be perfectly aligned and evenly spaced around the center.
+- Navbar should be sticky on scroll.
+- Smooth hover underline or color change animation for links.
+
+---
+
+### Pages / Sections:
+
+#### 1. Homepage
+- Hero section:
+  - Large, minimal banner with the studio name “AlphaHaze Studios”.
+  - Tagline: “Creating Fun, Simple, and Addictive Games for Everyone.”
+  - “View Our Games” button that scrolls down or links to the Games section/page.
+  - Add a Google Play button image linking to the studio’s Play Store account (use placeholder link for now).
+- Add 2–3 more clean sections below (e.g., “Our Vision”, “Featured Games”, “Why Choose AlphaHaze?”).
+- make it like page scroll, one at a time
+- Include soft scroll animations (e.g., fade-in from bottom).
+
+#### 2. Games Page
+- Grid layout of game cards (like Bhoos Games’ style):
+  - Each card shows a thumbnail (placeholder image) and title below it.
+  - Hover effect: card slightly lifts or scales.
+- Clicking a card opens the individual game page.
+- Each game page includes:
+  - Game title and icon.
+  - Short “About this game” description.
+  - “Download on Google Play” button (official Play Store badge image).
+  - “How to Play” section with its screenshots.
+  - “FAQs” section.
+
+#### 3. About Page
+- A short, elegant section describing the story and mission of AlphaHaze Studios.
+- A “Careers” subsection describing the studio’s growth path and future opportunities.
+- Include contact info and a small paragraph about studio values and passion for making games.
+
+#### 4. Contact Page
+- A simple, friendly message like:
+  > “You matter to us! We’re looking forward to hearing from you.”
+- Display social media icons (Twitter, Instagram, YouTube, Email) with hover effects.
+- No form submission needed — just links to social accounts.
+
+---
+
+### Footer (same across all pages):
+4 columns:
+1. **Logo** and below it, the “Download on Google Play” badge.
+2. **Company** section: links to About Us, Games, and Contact.
+3. **Games** list: Game 1, Game 2, Game 3 (links to their individual pages).
+4. **Support** section: link to “Contact Us” or “Support” page.
+Bottom-most area:
+- Copyright © 2025 AlphaHaze Studios | All Rights Reserved.
+- Links to “Privacy Policy” and “Terms & Conditions” pages.
+- Light horizontal divider above the copyright.
+
+---
+
+### Additional Pages:
+- **Privacy Policy** page (placeholder text)
+- **Terms & Conditions** page (placeholder text)
+
+---
+
+### Technical Requirements:
+- No backend — purely static front-end website.
+- Smooth scrolling, section animations, and hover effects.
+- Consistent header and footer across all pages.
+
+Everything should feel minimal, premium, and professional — like a modern indie game studio website.
