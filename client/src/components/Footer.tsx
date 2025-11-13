@@ -24,7 +24,7 @@ export function Footer() {
             <img
               src={logoImage}
               alt="AlphaHaze Studios"
-              className="h-16 w-16 object-contain"
+              className="h-512 w-512 object-contain"
             />
             <a
               href="https://play.google.com/store/apps/dev?id=placeholder"
