@@ -1,14 +1,28 @@
-name: Deploy Website
+name: Deploy AlphaHaze
 on:
   push:
-    branches: [master]
+    branches:
+      - master
   workflow_dispatch:
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy via appleboy-ssh
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Restart AlphaHaze server
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -16,15 +30,9 @@ jobs:
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           script: |
             cd /home/ubuntu/Projects/alphahaze-studios
-            git pull origin master
-            npm ci
-            if grep -q '"build"' package.json; then
-              npm run build
-            fi
             if pm2 describe alphahaze > /dev/null; then
-              pm2 restart index.js --name alphahaze -- PORT=5000
+              pm2 restart alphahaze --update-env
             else
-              pm2 start index.js --name alphahaze -- PORT=5000
+              pm2 start dist/index.js --name alphahaze -- PORT=5000
             fi
             pm2 save
-            pm2 status
