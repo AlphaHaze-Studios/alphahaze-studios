@@ -32,9 +32,13 @@ jobs:
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           script: mkdir -p /home/ubuntu/Projects/alphahaze-studios
 
-      - name: Deploy dist/ to VM via rsync
+      - name: Deploy dist/ via rsync
         run: |
-          rsync -avz --delete -e "ssh -i ${{ secrets.PRIVATE_SSH_KEY }} -o StrictHostKeyChecking=no" dist/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/ubuntu/Projects/alphahaze-studios/
+          echo "${{ secrets.PRIVATE_SSH_KEY }}" > private_key
+          chmod 600 private_key
+          rsync -avz --delete -e "ssh -i private_key -o StrictHostKeyChecking=no" dist/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/ubuntu/Projects/alphahaze-studios/
+          rm private_key
+        shell: bash
 
       - name: Restart Node.js server with PM2
         uses: appleboy/ssh-action@v1.2.0
