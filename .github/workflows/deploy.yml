@@ -25,7 +25,7 @@ jobs:
         run: npm run build
 
       - name: Deploy dist/ to VM via rsync
-        uses: burnett01/rsync-deployments@v7
+        uses: burnett01/rsync-deployments@7.1.0
         with:
           switches: -avzr --delete
           path: dist/
