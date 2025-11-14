@@ -30,6 +30,7 @@ jobs:
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           script: |
             cd /home/ubuntu/Projects/alphahaze-studios
+            git pull origin master
             if pm2 describe alphahaze > /dev/null; then
               pm2 restart alphahaze --update-env
             else
