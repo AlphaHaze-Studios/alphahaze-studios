@@ -28,7 +28,9 @@ jobs:
         uses: burnett01/rsync-deployments@7.1.0
         with:
           switches: -avzr --delete
-          path: dist/
+          path: |
+            dist/index.js
+            dist/public/
           remote_path: /home/ubuntu/Projects/alphahaze-studios
           remote_host: ${{ secrets.SERVER_HOST }}
           remote_user: ${{ secrets.SERVER_USER }}
@@ -43,8 +45,8 @@ jobs:
           script: |
             cd /home/ubuntu/Projects/alphahaze-studios
             if pm2 describe alphahaze > /dev/null; then
-              pm2 restart alphahaze
+              pm2 restart index.js --name alphahaze
             else
-              pm2 start dist/index.js --name alphahaze
+              pm2 start index.js --name alphahaze
             fi
             pm2 save
