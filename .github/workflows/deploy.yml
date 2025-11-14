@@ -10,7 +10,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -31,6 +30,9 @@ jobs:
           script: |
             cd /home/ubuntu/Projects/alphahaze-studios
             git pull origin master
+            npm ci
+            npm run build
+            export NODE_ENV=production
             if pm2 describe alphahaze > /dev/null; then
               pm2 restart alphahaze --update-env
             else
