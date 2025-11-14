@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logoImage from "@assets/generated_images/AlphaHaze_final_logo.png";
+import logoImage from "@assets/alphahaze-logo_1763085565837.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,7 +24,7 @@ export function Footer() {
             <img
               src={logoImage}
               alt="AlphaHaze Studios"
-              className="h-20 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
             <a
               href="https://play.google.com/store/apps/dev?id=placeholder"
